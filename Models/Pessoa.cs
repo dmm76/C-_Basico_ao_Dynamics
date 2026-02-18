@@ -1,3 +1,4 @@
+using System.Text;
 using projeto01.Models.ValueObjects;
 
 namespace projeto01.Models;
@@ -51,6 +52,20 @@ public class Pessoa
 
     public void Apresentar()
     {
-        Console.WriteLine($"Ola! Meu nome é {Nome} e tenho {Idade} anos e meu cpf é {Cpf}");
+        Console.WriteLine(ToString());
+    }
+
+    public override string ToString()
+    {
+        var sb = new StringBuilder();
+
+        sb.Append("Ola! Meu nome é ")
+            .Append(Nome)
+            .Append(" e tenho ")
+            .Append(Idade)
+            .Append(" anos e meu cpf é ")
+            .Append(Cpf);
+
+        return sb.ToString();
     }
 }
