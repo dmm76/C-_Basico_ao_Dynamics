@@ -10,6 +10,8 @@ public class Pessoa
 
     public Cpf Cpf { get; private set; }
 
+    public Pessoa() { }
+
     public Pessoa(string nome, int idade, string cpf)
     {
         AdicionarNome(nome);
